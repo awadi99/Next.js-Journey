@@ -1,3 +1,10 @@
+export const metadata={
+    title:"User | Contact ",
+    description: "This is USer about page",
+    keywords: ["java", "nextjs", "about page"]
+
+}
+
 function Contact(){
     return(
         <>

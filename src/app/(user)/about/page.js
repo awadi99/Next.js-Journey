@@ -1,3 +1,11 @@
+export const metadata={
+    title:"User | about",
+    description: "This is USer about page",
+    keywords: ["java", "nextjs", "about page"]
+
+}
+
+
 function About(){
     return(
         <>
