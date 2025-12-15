@@ -1,5 +1,9 @@
-const  nestedDynamicRouter = async(props) => {
-    const user = await props.params;
+"use client"
+import { use } from "react";
+
+const  nestedDynamicRouter = (props) => {
+    const user = use(props.params);
+    // i can use the (use) keywords and handle async and an await function use without declear the async an await
     console.log(user);
     return (
         <>
