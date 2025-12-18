@@ -1,3 +1,5 @@
+
+import ProductList from '@/app/searchparamsclient/page';
 import React from 'react';
 
 export default function Page({ searchParams }) {
@@ -7,6 +9,7 @@ export default function Page({ searchParams }) {
 
   return (
     <div>
+      <ProductList/>
       Showing {category} products, sorted by {sort}, page {page}
     </div>
   );
