@@ -5,8 +5,7 @@ const Blog = async (props)=>{
         <>
         {/* catch - all segment */}
         <h1>Blog</h1>
-        <h1>{slug}</h1>
-        </>
+        <h1>{slug.join('/')}</h1>        </>
     )
 
 }
