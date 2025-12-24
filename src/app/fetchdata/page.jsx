@@ -11,7 +11,7 @@ const FetchData = async (props) => {
 
     return (
         <>
-            <div className="h-auto w-20 sm:w-20 lx:20 b-1 flex" >
+            <div className="h-auto w-20 sm:w-20 xl:w-20 border flex" >
             <h1>{data.name}</h1>
             <p>{data.age}</p>
             <p>{data.count}</p>
