@@ -1,6 +1,7 @@
 import axios from "axios";
 import {User} from "lucide-react";
 import TiltCard from "./card";
+import { resolve } from "styled-jsx/css";
 
 const FetchData = async (props) => {
     const searchParams =  await props.searchParams;
@@ -10,6 +11,12 @@ const FetchData = async (props) => {
     // const url =`https://api.agify.io/?name=${username}`
     const res = await axios.get(url);
     const data = res.data;
+
+    await new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve();
+        },3000)
+    })
 
     return (
         <>
