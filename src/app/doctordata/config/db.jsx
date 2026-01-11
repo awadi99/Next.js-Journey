@@ -1,11 +1,11 @@
 import mysql from "mysql2/promise"
 
-
-export const db = mysql.createPool({
+ export const db = mysql.createPool({
     host:"localhost",
     user:"root",
-    password:"9099",
-    database:"hospital_db"
+    password:"1807",
+    database:"hospital_db",
+    port :3306
 });
 
 try{
@@ -16,3 +16,4 @@ try{
     console.error("database connection failed",error);
     process.exit(1);
 }
+

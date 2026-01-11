@@ -1,14 +1,27 @@
-import React from 'react'
-import { db } from './config/db'
+import { db } from "./config/db";
 
- const page = async ()=> {
-    try{
-    const doctor = await db.execute("select * from doctors");
-    console.log(doctor);
-    }catch(error){
-        console.error(error);
-    }
-    return (
-    <div>page</div>
+
+const StaticPage = async () =>{
+  const [doctors] = await db.execute("select * from doctors");
+  console.log(doctors);
+
+
+  return (
+    <>
+    <div>
+      <h1 className="text-center font-medium text-3xl">Doctor Name </h1>
+      <ul className="p-10 list-disc list-inside">
+        {
+          doctors.map((doctors)=>{
+            return <li key={doctors.doctor_id} >
+                {doctors.doctor_name}
+            </li>
+          })
+        }
+      </ul>
+    </div>
+    </>
   )
 }
+
+export default StaticPage;
