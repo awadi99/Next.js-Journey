@@ -1,6 +1,5 @@
 import { db } from "@/app/doctordata/config/db";
 
-import React from 'react'
 const dynamic = 'force-dynamic';
 
 const Dynamic = async () => {
