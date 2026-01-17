@@ -48,6 +48,15 @@ export const dynamic = "force-dynamic";
 // } 
 
 
+
+export async function generateStaticParams(){
+  const [doctors] = await db.execute("SELECT doctor_id FROM doctors");
+  return doctors.map((doctor)=>({id:doctor.doctor_id.toString()}));
+    
+} 
+
+
+
 const SingleDoctor = async ({params}) => {
   const {id} =  await params;
 
