@@ -1,19 +1,21 @@
 'use client';
 
 import React from 'react';
-import { House } from 'lucide-react';
+import { House, ArrowLeft } from 'lucide-react';
 import {
     motion,
     useMotionValue,
     useTransform,
 } from 'framer-motion';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 
 
 
 
 export default function Page() {
+    const router = useRouter();
     // Mouse-based tilt values
     const mouseX = useMotionValue(0);
     const mouseY = useMotionValue(0);
@@ -34,7 +36,7 @@ export default function Page() {
 
     return (
         <motion.div
-            className="relative min-h-screen overflow-hidden flex items-center justify-center text-white bg-slate-900 contrast-145"
+            className="relative min-h-screen overflow-hidden flex items-center justify-center text-white bg-slate-900 contrast-145 "
         >
             {/* Background Glow */}
             <div className="absolute inset-0 from-violet-400/10 via-cyan-800/10 to-red-300/10 contrast-145" />
@@ -88,7 +90,23 @@ export default function Page() {
                 </motion.p>
 
                 {/* Button */}
-                <Link href="/">
+
+                <div className='flex justify-center items-center gap-4'>
+                    <Link href="/">
+                        <motion.button
+                            whileHover={{
+                                scale: 1.08,
+                                boxShadow: '0 0 18px rgba(34,211,238,0.6)',
+                            }}
+                            whileTap={{ scale: 0.95 }}
+                            className="px-10 py-3 rounded-full font-semibold tracking-wide bg-gradient-to-r from-purple-600 via-cyan-500 to-pink-600 "
+                        >
+                            <div className='flex gap-2 items-center justify-center '>
+                                <House /> Go Home
+                            </div>
+                        </motion.button>
+                    </Link>
+
                     <motion.button
                         whileHover={{
                             scale: 1.08,
@@ -96,12 +114,13 @@ export default function Page() {
                         }}
                         whileTap={{ scale: 0.95 }}
                         className="px-10 py-3 rounded-full font-semibold tracking-wide bg-gradient-to-r from-purple-600 via-cyan-500 to-pink-600 "
+                        onClick={() => router.back()}
                     >
-                       <div className='flex gap-2 items-center justify-center '>
-                       <House /> Go Home
-                       </div>
+                        <div className='flex gap-2 items-center justify-center '>
+                            <ArrowLeft /> Go Back
+                        </div>
                     </motion.button>
-                </Link>
+                </div>
             </motion.div>
         </motion.div>
     );
