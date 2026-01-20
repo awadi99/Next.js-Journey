@@ -8,6 +8,7 @@ function Nav(){
                     <Link href="/about">About</Link>
                     <Link href="/contact">Contact</Link>
                     <Link href="/product">Products</Link>
+                    <Link href="/signup">Signup</Link>
                 </div>
             </div>
         </>
