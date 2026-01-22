@@ -24,6 +24,7 @@ const Hospital = async () => {
           <p className="mt-1 text-xs text-slate-300">
             Medical institution details
           </p>
+          
         </div>
 
         {/* Hospital ID */}
