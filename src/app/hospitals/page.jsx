@@ -101,7 +101,7 @@ const Hospital = async () => {
       </form>
 
       {/* RECORDS SECTION */}
-      <div className="relative z-10 w-[700px] max-h-[300px] overflow-y-auto rounded-xl border border-white/10 bg-white/5 backdrop-blur-xl p-6">
+      <div className="relative z-10 w-[700px] max-h-[300px] overflow-y-scroll rounded-xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 ">
 
         <h2 className="mb-4 text-lg font-semibold text-white">
           Hospital Records
