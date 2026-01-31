@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${Pop.className} bg-slate-900 text-amber-50`}
+        className={`${Pop.className}`}
       >
         <Nav/>
         {children}
